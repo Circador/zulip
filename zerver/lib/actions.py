@@ -1648,6 +1648,12 @@ def check_send_message(sender, client, message_type_name, message_to,
         message_to,
         topic_name)
 
+    print('Before: ', message_content)
+    # if messages contains 'welcome', replaces message_content to the requested message
+    if 'welcome' in message_content:
+        message_content "Welcome to Zulip :octopus:"
+    print('After: ', message_content)
+
     message = check_message(sender, client, addressee,
                             message_content, realm, forged, forged_timestamp,
                             forwarder_user_profile, local_id, sender_queue_id)
