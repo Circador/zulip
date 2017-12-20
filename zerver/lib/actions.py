@@ -1651,7 +1651,7 @@ def check_send_message(sender, client, message_type_name, message_to,
     print('Before: ', message_content)
     # if messages contains 'welcome', replaces message_content to the requested message
     if 'welcome' in message_content:
-        message_content "Welcome to Zulip :octopus:"
+        message_content = "Welcome to Zulip :octopus:"
     print('After: ', message_content)
 
     message = check_message(sender, client, addressee,
